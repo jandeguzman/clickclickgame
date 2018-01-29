@@ -1,4 +1,3 @@
-//imports dependencies and files
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
@@ -7,7 +6,6 @@ import Footer from "./components/Footer";
 import food from "./Nuggets.json";
 import "./App.css";
 
-//sets state to 0 or empty
 class App extends Component {
   state = {
     food,
@@ -16,13 +14,12 @@ class App extends Component {
  
   };
 
-//when you click on a card ... the food is taken out of the array
   imageClick = event => {
     const currentNuggets = event.target.alt;
     const NuggetsAlreadyClicked =
       this.state.clickedfood.indexOf(currentNuggets) > -1;
 
-//if you click on a food that has already been selected, the game is reset and cards reordered
+
     if (NuggetsAlreadyClicked) {
       this.setState({
         food: this.state.food.sort(function(a, b) {
@@ -31,9 +28,9 @@ class App extends Component {
         clickedfood: [],
         score: 0
       });
-        alert("You lose. Play again?");
+        alert("Better luck next time! Try again?");
 
-//if you click on an available food, your score is increased and cards reordered
+
     } else {
       this.setState(
         {
@@ -45,7 +42,7 @@ class App extends Component {
           ),
           score: this.state.score + 1
         },
-//if you get all 12 food correct you get a congrats message and the game resets        
+   
         () => {
           if (this.state.score === 12) {
             alert("Yay! You Win!");

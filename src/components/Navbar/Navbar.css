@@ -4,8 +4,8 @@
   position: fixed;
 }*/
 
-.itemLeft {
-  width: 15%;
+/*.itemLeft {
+
 }
 
 .itemCenter {
@@ -15,7 +15,7 @@
 
 .itemRight {
   width: 15%;
-}
+}*/
 
 /*.navbar {
   background: #490549;
@@ -46,9 +46,6 @@ ul {
     width: 100%;
 }
 
-li {
-    text-align: center;
-}
 
 li {
     display: inline-block;
@@ -71,13 +68,10 @@ body {
 }
 
 .itemLeft {
-  width: 15%;
+margin-left: 450px;
 }
 
-.itemCenter {
-  width: 70%;
-}
 
 .itemRight {
-  width: 15%;
+padding-left: 40px;
 }
